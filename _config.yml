@@ -12,20 +12,18 @@ base_info:
   primary_color: "#0066cc"
 
   # Blog website title
-  title: Keep Theme
+  title: Z.H.Qiao
 
   # Blog website author name
-  author: Keep Team
+  author: Z.H.Qiao
 
   # Author avatar, You can use local image path or image link
-  avatar: /images/avatar.svg
-
+  avatar: https://avatars.githubusercontent.com/u/199441193?s=400&u=9766042fe29f84215af2be40cabfc1fac90a0ab4&v=4
   # Website LOGO, You can use local image path or image link
-  logo: /images/logo.svg
+  logo: https://avatars.githubusercontent.com/u/199441193?s=400&u=9766042fe29f84215af2be40cabfc1fac90a0ab4&v=4
 
   # Website favicon, You can use local image path or image link
-  favicon: /images/logo.svg
-
+  favicon: /logo.svg
 
 # ---------------------------------------------------------------------------------------
 # Docs: https://keep-docs.xpoet.cn/basis/configuration-guide/menu.html
@@ -36,12 +34,12 @@ base_info:
 menu:
   home: /                       # || fa-solid fa-home
   archives: /archives           # || fa-solid fa-box-archive
-  # tags: /tags                 # || fa-solid fa-tags
-  # categories: /categories     # || fa-solid fa-layer-group
-  # links: /links               # || fa-solid fa-link
+  tags: /tags                 # || fa-solid fa-tags
+  categories: /categories     # || fa-solid fa-layer-group
+  links: /links               # || fa-solid fa-link
   # photos: /photos             # || fa-solid fa-image
   # tools: /tools               # || fa-solid fa-tools
-  # about: /about               # || fa-solid fa-user-graduate
+  about: /about               # || fa-solid fa-user-graduate
   # ......
 
 
@@ -91,10 +89,10 @@ social_contact:
 # ---------------------------------------------------------------------------------------
 scroll:
   # Show progress bar in top when page scroll
-  progress_bar: false  # Option values: true | false
+  progress_bar: true  # Option values: true | false
 
   # Show percent when page scroll
-  percent: false       # Option values: true | false
+  percent: true      # Option values: true | false
 
   # Hide header in top when page scroll
   hide_header: true    # Option values: true | false
@@ -108,10 +106,10 @@ home:
   announcement:
 
   # Show category in home page post block
-  category: false           # Option values: true | false
+  category: true           # Option values: true | false
 
   # Show tags in home page post block
-  tag: false                # Option values: true | false
+  tag: true                # Option values: true | false
 
   # Set the datetime type of home page post block
   post_datetime: updated    # Option values: updated | created
@@ -127,32 +125,32 @@ post:
 
     # If true, show Lv1, Lv2, Lv3 ...
     # If false, show custom badge
-    level_badge: true    # Option values: true | false
+    level_badge: false   # Option values: true | false
 
     # Custom badge array, You can be fill one or more item
-    custom_badge: ["One", "Two", "Three"]
+    custom_badge: 无聊中
 
   # Post word count
   # Depend on Hexo Plugin: hexo-wordcount (`npm install hexo-wordcount`)
   # See: https://github.com/willin/hexo-wordcount
   word_count:
-    wordcount: false     # Word count, one post. Option values: true | false
-    min2read: false      # Time to read, one post. Option values: true | false
+    wordcount: true     # Word count, one post. Option values: true | false
+    min2read: true     # Time to read, one post. Option values: true | false
 
   # Post datetime
   datetime_format: "YYYY-MM-DD HH:mm:ss"  # Datetime format. e.g. "YYYY-MM-DD HH:mm:ss"
 
   # Post copyright info
-  copyright_info: false  # Option values: true | false
+  copyright_info: true  # Option values: true | false
 
   # Post share
-  share: false           # Option values: true | false
+  share: true          # Option values: true | false
 
   # Reward author
   reward:
-    enable: false        # Option values: true | false
-    img_link:            # Image link for the payment QR code
-    text:                # Custom reward text, Can be null
+    enable: true       # Option values: true | false
+    img_link:  /qrcode.png      # Image link for the payment QR code
+    text:  请作者喝奶茶              # Custom reward text, Can be null
     icon:                # Custom reward icon, Can be null
 
 
@@ -171,7 +169,7 @@ code_block:
 # Docs: https://keep-docs.xpoet.cn/basis/configuration-guide/toc.html
 # ---------------------------------------------------------------------------------------
 toc:
-  enable: false      # Option values: true | false
+  enable: true     # Option values: true | false
 
   # Automatically add list number to toc
   number: false      # Option values: true | false
@@ -193,10 +191,10 @@ website_count:
   # busuanzi
   # See: http://ibruce.info/2015/04/04/busuanzi/
   busuanzi_count:
-    enable: false     # Option values: true | false
-    site_uv: false    # Option values: true | false
-    site_pv: false    # Option values: true | false
-    page_pv: false    # Option values: true | false
+    enable: true     # Option values: true | false
+    site_uv: true      # Option values: true | false
+    site_pv: true     # Option values: true | false
+    page_pv: true      # Option values: true | false
 
 
 # ---------------------------------------------------------------------------------------
@@ -205,16 +203,16 @@ website_count:
 # See: https://github.com/theme-next/hexo-generator-searchdb
 # ---------------------------------------------------------------------------------------
 local_search:
-  enable: false   # Option values: true | false
-  preload: false  # Preload the search data when the page loads. Option values: true | false
+  enable: true  # Option values: true | false
+  preload: true  # Preload the search data when the page loads. Option values: true | false
 
 
 # ---------------------------------------------------------------------------------------
 # Docs: https://keep-docs.xpoet.cn/basis/configuration-guide/comment.html
 # ---------------------------------------------------------------------------------------
 comment:
-  enable: false   # Option values: true | false
-  use: valine     # Option values: valine | gitalk | twikoo | waline | giscus | artalk | disqus
+  enable: false  # Option values: true | false
+  use: twikoo    # Option values: valine | gitalk | twikoo | waline | giscus | artalk | disqus
 
   # Valine
   # See: https://github.com/xCss/Valine
@@ -295,7 +293,7 @@ lazyload:
 # Docs: https://keep-docs.xpoet.cn/basis/configuration-guide/cdn.html
 # ---------------------------------------------------------------------------------------
 cdn:
-  enable: false       # Option values: true | false
+  enable:  true      # Option values: true | false
   provider: cdnjs     # Option values: cdnjs | jsdelivr | unpkg
 
 
@@ -310,11 +308,11 @@ pjax:
 # Docs: https://keep-docs.xpoet.cn/basis/configuration-guide/footer.html
 # ---------------------------------------------------------------------------------------
 footer:
-  since: 2020            # The starting year of your website, Can be null
+  since: 2025            # The starting year of your website, Can be null
   word_count: false      # Option values: true | false
 
   site_deploy:
-    enable: false        # Option values: true | false
+    enable: true       # Option values: true | false
     provider: github     # Option values: github | vercel | netlify | cloudflare | gitee | aliyun | tencent_cloud | upyun
     url:                 # Your deployment provider url, Can be null
 
